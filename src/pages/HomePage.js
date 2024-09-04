@@ -1,11 +1,13 @@
-import React from 'react'
-import "./HomePage.css"
+import React from "react";
+import { Link } from "react-router-dom";
 
-export default function HomePage(props) {
+export default function HomePage() {
   return (
     <div>
-      <h1 className='two'>his name is {props.name} age is {props.age}</h1>
-      {props.children}
+      <h1>This is Home Page</h1>
+      <button>
+        <Link to="/about">click</Link>
+      </button>
     </div>
-  )
+  );
 }

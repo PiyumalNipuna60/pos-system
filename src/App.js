@@ -1,17 +1,20 @@
-import './App.css';
-import HomePage from './pages/HomePage';
+import "./App.css";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import HomePage from "./pages/HomePage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <HomePage name="piyumal" age="10">
-        <h2 className='one'>Hello from HomePage</h2>
-      </HomePage>
-      <HomePage name="nipuna" age="20">
-        <button className='btn'>save</button>
-      </HomePage>
-      <HomePage name="kamal" age="30"/>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
